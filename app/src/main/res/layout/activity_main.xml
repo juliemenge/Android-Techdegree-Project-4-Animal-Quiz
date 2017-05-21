@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.juliemenge.animalquiz.MainActivity">
+
+    <TextView
+        android:id="@+id/ratingScaleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:paddingTop="20dp"
+        android:text="0 = never, 1 = rarely, 2 = monthly, 3 = weekly, 4 = daily"
+        app:layout_constraintBottom_toTopOf="@+id/question1TextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445"/>
+
+    <TextView
+        android:id="@+id/question1TextView"
+        style="@style/QuestionLayout"
+        android:text="How often do you eat bananas?"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingScaleTextView"/>
+
+    <RadioGroup
+        android:id="@+id/question1RadioGroup"
+        style="@style/RadioGroupHorizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question1TextView">
+
+        <RadioButton
+            android:id="@+id/radioButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonTextBelow"
+            android:text="0"/>
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonTextBelow"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonTextBelow"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonTextBelow"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonTextBelow"
+            android:text="4"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question2TextView"
+        style="@style/QuestionLayout"
+        android:text="How often do you wear stripes?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question1RadioGroup"/>
+
+    <RadioGroup
+        android:id="@+id/question2RadioGroup"
+        style="@style/RadioGroupHorizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question2TextView">
+
+        <RadioButton
+            android:id="@+id/radioButton25"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButton24"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButton23"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButton22"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButton21"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question3TextView"
+        style="@style/QuestionLayout"
+        android:text="How often do you swim?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question2RadioGroup"/>
+
+    <RadioGroup
+        style="@style/RadioGroupHorizontal"
+        app:layout_constraintTop_toBottomOf="@+id/question3TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/question3RadioGroup">
+
+        <RadioButton
+            android:id="@+id/radioButton30"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButton29"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButton28"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButton27"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButton26"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question4TextView"
+        style="@style/QuestionLayout"
+        android:text="How often do you eat peanuts?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question3RadioGroup"/>
+
+    <RadioGroup
+        android:id="@+id/question4RadioGroup"
+        style="@style/RadioGroupHorizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question4TextView">
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question5TextView"
+        style="@style/QuestionLayout"
+        android:text="How often do you eat bamboo?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question4RadioGroup"/>
+
+    <RadioGroup
+        android:id="@+id/question5RadioGroup"
+        style="@style/RadioGroupHorizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question5TextView">
+
+        <RadioButton
+            android:id="@+id/radioButton15"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButton14"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButton13"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+
