@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.juliemenge.animalquiz.MainActivity">
+    tools:context="com.juliemenge.animalquiz.UI.MainActivity">
 
     <TextView
         android:id="@+id/ratingScaleTextView"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="8dp"
         android:paddingTop="20dp"
-        android:text="0 = never, 1 = rarely, 2 = monthly, 3 = weekly, 4 = daily"
+        android:text="1 = never, 2 = rarely, 3 = monthly, 4 = weekly, 5 = daily"
         app:layout_constraintBottom_toTopOf="@+id/question1TextView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -39,44 +39,44 @@
         app:layout_constraintTop_toBottomOf="@+id/question1TextView">
 
         <RadioButton
-            android:id="@+id/radioButton12"
+            android:id="@+id/question1Button1"
+            style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/RadioButtonTextBelow"
-            android:text="0"/>
-
-        <RadioButton
-            android:id="@+id/radioButton11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            style="@style/RadioButtonTextBelow"
             android:text="1"/>
 
         <RadioButton
-            android:id="@+id/radioButton10"
+            android:id="@+id/question1Button2"
+            style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/RadioButtonTextBelow"
             android:text="2"/>
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/question1Button3"
+            style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/RadioButtonTextBelow"
             android:text="3"/>
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/question1Button4"
+            style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/RadioButtonTextBelow"
             android:text="4"/>
+
+        <RadioButton
+            android:id="@+id/question1Button5"
+            style="@style/RadioButtonTextBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"/>
     </RadioGroup>
 
     <TextView
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/question2TextView">
 
         <RadioButton
-            android:id="@+id/radioButton25"
+            android:id="@+id/question2Button1"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
             android:text="1"/>
 
         <RadioButton
-            android:id="@+id/radioButton24"
+            android:id="@+id/question2Button2"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
             android:text="2"/>
 
         <RadioButton
-            android:id="@+id/radioButton23"
+            android:id="@+id/question2Button3"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
             android:text="3"/>
 
         <RadioButton
-            android:id="@+id/radioButton22"
+            android:id="@+id/question2Button4"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
             android:text="4"/>
 
         <RadioButton
-            android:id="@+id/radioButton21"
+            android:id="@+id/question2Button5"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
         android:id="@+id/question3RadioGroup">
 
         <RadioButton
-            android:id="@+id/radioButton30"
+            android:id="@+id/question3Button1"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
             android:text="1"/>
 
         <RadioButton
-            android:id="@+id/radioButton29"
+            android:id="@+id/question3Button2"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
             android:text="2"/>
 
         <RadioButton
-            android:id="@+id/radioButton28"
+            android:id="@+id/question3Button3"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
             android:text="3"/>
 
         <RadioButton
-            android:id="@+id/radioButton27"
+            android:id="@+id/question3Button4"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
             android:text="4"/>
 
         <RadioButton
-            android:id="@+id/radioButton26"
+            android:id="@+id/question3Button5"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
         app:layout_constraintTop_toBottomOf="@+id/question4TextView">
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/question4Button1"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
             android:text="1"/>
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/question4Button2"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -223,7 +223,7 @@
             android:text="2"/>
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/question4Button3"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
             android:text="3"/>
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/question4Button4"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -239,7 +239,7 @@
             android:text="4"/>
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/question4Button5"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
         app:layout_constraintTop_toBottomOf="@+id/question5TextView">
 
         <RadioButton
-            android:id="@+id/radioButton15"
+            android:id="@+id/question5Button1"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -271,7 +271,7 @@
             android:text="1"/>
 
         <RadioButton
-            android:id="@+id/radioButton14"
+            android:id="@+id/question5Button2"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
             android:text="2"/>
 
         <RadioButton
-            android:id="@+id/radioButton13"
+            android:id="@+id/question5Button3"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -287,7 +287,7 @@
             android:text="3"/>
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/question5Button4"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -295,7 +295,7 @@
             android:text="4"/>
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/question5Button5"
             style="@style/RadioButtonTextBelow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

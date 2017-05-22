@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AnimalQuiz</string>
+    <string name="key_name">Question1</string>
 </resources>
