@@ -42,7 +42,8 @@ public class ShowAnimalActivity extends AppCompatActivity {
 
         mCaptionTextView.setVisibility(View.INVISIBLE); //caption display should be invisible before the user submits something
 
-        //when button is clicked, make caption display visible
+        //when button is clicked, make caption display visible,
+        //and make caption editText and submit button invisible
         mCaptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,9 +59,10 @@ public class ShowAnimalActivity extends AppCompatActivity {
         //get the intent used to start this activity
         Intent intent = getIntent();
 
-        //assign the animal type
+        //assign the animal type as determined by MainActivity
         animalType = intent.getStringExtra("animal");
 
+        //set the background image to be that of the corresponding animal
         switch (animalType) {
             case "monkey":
                 mShowAnimalLayout.setBackgroundResource(R.drawable.monkey);
@@ -81,10 +83,7 @@ public class ShowAnimalActivity extends AppCompatActivity {
                 mShowAnimalLayout.setBackgroundResource(R.drawable.dolphin);
         }
 
-
-        Log.i(TAG, "HERE IT IS HERE" + animalType);
-
-        //toast the animal type
+        //display a toast showing the animal type
         Toast.makeText(this, "You are a " + animalType + "!", Toast.LENGTH_SHORT).show();
     }
 }

@@ -13,10 +13,6 @@ import android.widget.Toast;
 
 import com.juliemenge.animalquiz.R;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton mQuestion1Button4;
     private RadioButton mQuestion1Button5;
 
-    //radio button to store the answer the user chooses
+    //radio button to store the answer the user chooses for question 1
     private RadioButton mQuestion1SelectionButton;
 
     //question 2 options
@@ -44,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton mQuestion2Button4;
     private RadioButton mQuestion2Button5;
 
-    //radio button to store the answer the user chooses
+    //radio button to store the answer the user chooses for question 2
     private RadioButton mQuestion2SelectionButton;
 
     //question 3 options
@@ -55,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton mQuestion3Button4;
     private RadioButton mQuestion3Button5;
 
-    //radio button to store the answer the user chooses
+    //radio button to store the answer the user chooses for question 3
     private RadioButton mQuestion3SelectionButton;
 
     //question 4 options
@@ -66,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton mQuestion4Button4;
     private RadioButton mQuestion4Button5;
 
-    //radio button to store the answer the user chooses
+    //radio button to store the answer the user chooses for question 4
     private RadioButton mQuestion4SelectionButton;
 
     //question 5 options
@@ -77,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton mQuestion5Button4;
     private RadioButton mQuestion5Button5;
 
-    //radio button to store the answer the user chooses
+    //radio button to store the answer the user chooses for question 5
     private RadioButton mQuestion5SelectionButton;
 
 
@@ -131,24 +127,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         //when the submit button is clicked, determine the results and show the activity
-        // with the animal based on your choices
+        //with the animal based on user's choices
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //get answers for all 5 questions
+                //store the selected answers for all 5 questions
                 String mChoiceTextQ1 = findQuestionChoices(mQuestion1RadioGroup, mQuestion1SelectionButton);
                 String mChoiceTextQ2 = findQuestionChoices(mQuestion2RadioGroup, mQuestion2SelectionButton);
                 String mChoiceTextQ3 = findQuestionChoices(mQuestion3RadioGroup, mQuestion3SelectionButton);
                 String mChoiceTextQ4 = findQuestionChoices(mQuestion4RadioGroup, mQuestion4SelectionButton);
                 String mChoiceTextQ5 = findQuestionChoices(mQuestion5RadioGroup, mQuestion5SelectionButton);
 
-                //determine the animal based on choices, pass in all 5 selections
+                //determine the animal based on choices by passing in all 5 selections
                 String animalType = calculateAnimalResults(mChoiceTextQ1, mChoiceTextQ2, mChoiceTextQ3, mChoiceTextQ4, mChoiceTextQ5);
 
-                //start the new activity to display the animal, pass in all 5 selections
+                //start the new activity to display the correct animal
                 startShowAnimal(animalType);
-
             }
         });
 
@@ -158,16 +153,19 @@ public class MainActivity extends AppCompatActivity {
     private String findQuestionChoices(RadioGroup questionRadioGroup, RadioButton questionSelectionButton) {
         int selectedId = questionRadioGroup.getCheckedRadioButtonId();
         questionSelectionButton = (RadioButton) findViewById(selectedId);
-        String choice = (String) questionSelectionButton.getText();
+        String choice = (String) questionSelectionButton.getText(); //returns the text of the button, ie. "5"
         return choice;
-
-        //remember to check that all questions have been answered
     }
 
-    //based on answers, determine what animal to use
+    //based on answers, determine which animal to use
     private String calculateAnimalResults(String choice1, String choice2, String choice3, String choice4, String choice5) {
-        String animal = "dolphin";
+        String animal = "dolphin"; //initialize animal variable
 
+        //sets animal variable based on the question with the highest score
+        //if multiple questions have equally high scores, default to the
+        //animal associated with the question that comes first
+        //ie. if a user picks "5" for "How often do you eat bananas,"
+        //their animal will be a monkey
         if(choice1.equals("5")) {
             animal = "monkey";
         } else if (choice2.equals("5")) {
@@ -218,13 +216,13 @@ public class MainActivity extends AppCompatActivity {
             animal="elephant";
         } else animal = "red panda";
 
-        return animal;
+        return animal; //return the animal type as a string
     }
 
     //create the intent to start the animal activity
     private void startShowAnimal(String animal) {
         Intent intent = new Intent(this, ShowAnimalActivity.class); //create the intent
         intent.putExtra("animal", animal); //pass in the key and value, like "animal" and "monkey"
-        startActivity(intent); //start the new ShowAnimal
+        startActivity(intent); //start the new ShowAnimalActivity
     }
 }
