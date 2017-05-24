@@ -20,7 +20,7 @@ import java.util.TreeSet;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG = MainActivity.class.getSimpleName(); //create a tag to be used for logging
+    public static final String TAG = MainActivity.class.getSimpleName(); //tag used for logging
 
     //submit button
     private Button mSubmitButton;

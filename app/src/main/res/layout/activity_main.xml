@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2620f"
     tools:context="com.juliemenge.animalquiz.UI.MainActivity">
 
     <TextView
@@ -15,6 +16,8 @@
         android:layout_marginLeft="8dp"
         android:paddingTop="20dp"
         android:text="1 = never, 2 = rarely, 3 = monthly, 4 = weekly, 5 = daily"
+        android:textColor="#ffba26"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/question1TextView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,7 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1"/>
+            android:text="1"
+            />
 
         <RadioButton
             android:id="@+id/question1Button2"
@@ -52,7 +56,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2"/>
+            android:text="2"
+            />
 
         <RadioButton
             android:id="@+id/question1Button3"
@@ -144,11 +149,11 @@
         app:layout_constraintTop_toBottomOf="@+id/question2RadioGroup"/>
 
     <RadioGroup
+        android:id="@+id/question3RadioGroup"
         style="@style/RadioGroupHorizontal"
-        app:layout_constraintTop_toBottomOf="@+id/question3TextView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/question3RadioGroup">
+        app:layout_constraintTop_toBottomOf="@+id/question3TextView">
 
         <RadioButton
             android:id="@+id/question3Button1"
@@ -306,11 +311,13 @@
     <Button
         android:id="@+id/submitButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:background="#ffba26"
         android:text="SUBMIT"
+        android:textColor="#f2620f"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
